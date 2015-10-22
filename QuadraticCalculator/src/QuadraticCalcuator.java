@@ -26,10 +26,13 @@ public class QuadraticCalcuator {
                 double a = inputScanner.nextDouble();
                 double b = inputScanner.nextDouble();
                 double c = inputScanner.nextDouble();
+                System.out.println(a);
+                System.out.println(b);
+                System.out.println(c);
 
                 // do quadratic calculation and output possible answers (there are two)
-                double x = (-1 * b + Math.sqrt(b^2 - 4 * a * c)) / (2 * a); //need to change the squared part to make it a java thing
-                double xx = (-1 * b + Math.sqrt(b^2 - 4 * a * c)) / (2 * a);
+                double x = (-1 * b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+                double xx = (-1 * b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
                 System.out.println("x is equal to " + x + " and " + xx);
             }
             // if it is none of the above, it is probably invalid input
