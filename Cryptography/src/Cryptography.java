@@ -17,15 +17,15 @@ public class Cryptography
 
     // create a similar method for the ROT13 portion.
     // This method will return a character instead.
-    public int rotate13(char letter)
+    public char rotate13(char letter)
     {
         // fill in this method!
         int letterInt = (int)(letter);
-        int letter123 = letterInt - 64;
-        int letterNext = letter123 + 11;
-        int letter13 = letterNext % 26 + 1;
+        int letter123 = letterInt - 65;
+        int letterNext = letter123 + 13;
+        int letter13 = letterNext % 26 +1;
         int newNumber = letter13 + 64;
-        //char newLetter = (char)(newNumber);
-        return newNumber;
+        char newLetter = (char)(newNumber);
+        return newLetter;
     }
 }

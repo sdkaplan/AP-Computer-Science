@@ -6,7 +6,13 @@ public class CryptographyMain
     public static void main (String [] args)
     {
         //String encryptedCode = "the cat in the hat!";
-        String encryptedCode = "abcdefghijklmnopqrstuvwxyz";   // Try this to test out your code too.
+        String encryptedCode = "Lbhe Ghea--Nccyvrq\n" +
+                "\n" +
+                "\n" +
+                "Rkpryyrag wbo. Fhozvg lbhe Pelcgbtencul pynff ivn Cvnmmn, nybat jvgu gur frperg xrlcuenfr, \"zbqhyhf cbjre!\" \n" +
+                "Sbe rkgenf, pbaireg lbhe ebgngvba zrgubq gb gnxr va n ahzore, juvpu vf ubj zhpu gb ebgngr gur yrggref ol. Hfr guvf gb harapelcg gur zrffntr orybj. Lbh znl jnag gb jenc gur rkvfgvat ybbc vagb nabgure ybbc, fb vg jvyy gel nyy 26 cbffvovyvgvrf sbe lbh. \n" +
+                "\n" +
+                "Aiix div! Siol zchuf yrnlu cm ni gixczs nby guch wfumm mi cn wuh ohyhwlsjn nby ufjbuhogylcw wixy ch nby zclmn juln iz nbcm uwncpcns. Sio’ff hyyx ni gixczs nby qbcfy fiij, uhx omy Mwuhhyl ih nby Mnlcha xclywnfs(wbywe ion nby yrugjfym). Nbcm qcff vy pyls byfjzof zil nby jlidywn. ";   // Try this to test out your code too.
 
         encryptedCode = encryptedCode.toUpperCase(); // only deal with uppercased letters.
         Cryptography cryptoTool = new Cryptography();
