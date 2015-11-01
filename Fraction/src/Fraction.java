@@ -14,16 +14,17 @@ public class Fraction {
         {
             String wholeNumberString = inputFrac.substring(0, inputFrac.indexOf("_")); //gets string value of the whole number
             int wholeNumber = Integer.parseInt(wholeNumberString); //changes the string into an int
-            String numeratorString = inputFrac.substring(inputFrac.indexOf("_") + 1, inputFrac.indexOf("/")); //
-            int numerator = Integer.parseInt(numeratorString);
+            String numeratorString = inputFrac.substring(inputFrac.indexOf("_") + 1, inputFrac.indexOf("/")); //gets the string value of the numerator
+            int numerator = Integer.parseInt(numeratorString); //changes the string into an int
             numerator = numerator + denominator * wholeNumber;
+            this.numerator = numerator;
         }
         else
         {
             String numeratorString = inputFrac.substring(0, inputFrac.indexOf("/")); //creates a new substring that contains just the numerator
             int numerator = Integer.parseInt(numeratorString);
+            this.numerator = numerator;
         }
-        this.numerator = numerator;
         this.denominator = denominator;
     }
 
@@ -36,7 +37,7 @@ public class Fraction {
     {
         return numerator;
     }
-/*
+
     public String add(Fraction theFraction)
     {
         int numeratorOne = this.numerator;
@@ -53,15 +54,17 @@ public class Fraction {
             //numeratorOne * multiplierOne = numeratorOne
             //numeratorTwo * multiplierTwo = numeratorTwo
             //numeratorOne + numeratorTwo = numeratorAnswer
+            return "nothing yet";
         }
         else
         {
-            //add numeratorOne and numeratorTwo
-            //set equal to numeratorAnswer
+            int numeratorAnswer = numeratorOne + numeratorTwo; //adds the two numerators together
+            String numeratorAnswerString = Integer.toString(numeratorAnswer); //changes the numerator to a string
+            String denominatorAnswerString = Integer.toString(denominatorOne); //changes the denominator to a string
+            String fracAnswer = numeratorAnswerString + denominatorAnswerString; //combines the numerator and denominator into one string
+            //NEED TO DO: add in a / between the numerator and denominator
+            return fracAnswer;
         }
-
-        //return numeratorAnswer + “/” + denominatorAnswer
-        return "nothing yet";
     }
 
     public String subtract(Fraction theFraction)
@@ -75,20 +78,31 @@ public class Fraction {
         if (denominatorOne != denominatorTwo)
         {
             //find the lowest common multiple of denominatorOne and denominatorTwo = denominatorAnswer
-            //denominatorAnswer / denomintatorOne = multiplierOne
-            //denominatorAnswer / denominatorTwo = multiplierTwo
-            //numeratorOne * multiplierOne = numeratorOne
-            // numeratorTwo * multiplierTwo = numeratorTwo
-            //numeratorOne - numeratorTwo = numeratorAnswer
+            int multiplierOne = denominatorAnswer / denominatorOne;
+            int multiplierTwo = denominatorAnswer / denominatorTwo;
+            numeratorOne = numeratorOne * multiplierOne;
+            numeratorOne = numeratorTwo * multiplierTwo;
+            int numeratorAnswer = numeratorOne - numeratorTwo;
+
+            String numeratorAnswerString = Integer.toString(numeratorAnswer); //changes the numerator to a string
+            String denominatorAnswerString = Integer.toString(denominatorAnswer); //changes the denominator to a string
+            String fracAnswer = numeratorAnswerString + denominatorAnswerString; //combines the numerator and denominator into one string
+            //NEED TO DO: add in a / between the numerator and denominator
+            return fracAnswer;
+
+            //return "nothing yet";
         }
         else
         {
-            //subtract numeratorOne and numeratorTwo
-            //set equal to numeratorAnswer
+            int numeratorAnswer = numeratorOne - numeratorTwo; //adds the two numerators together
+            String numeratorAnswerString = Integer.toString(numeratorAnswer); //changes the numerator to a string
+            String denominatorAnswerString = Integer.toString(denominatorOne); //changes the denominator to a string
+            String fracAnswer = numeratorAnswerString + denominatorAnswerString; //combines the numerator and denominator into one string
+            //NEED TO DO: add in a / between the numerator and denominator
+            return fracAnswer;
         }
 
         //return numeratorAnswer + “/” + denominatorAnswer
-        return "nothing yet";
     }
 
     public String multiply(Fraction theFraction)
@@ -99,12 +113,16 @@ public class Fraction {
         int numeratorTwo = theFraction.getNum();
         int denominatorTwo = theFraction.getDenom();
 
-        //multiply numeratorOne and numeratorTwo store in numeratorAnswer
-        //multiply denominatorOne and denominatorTwo store in denominatorAnswer
-        //return numeratorAnswer + “/” + denominatorAnswer
-        return "nothing yet";
-    }
+        int numeratorAnswer = numeratorOne * numeratorTwo; //multiplies the numerators
+        int denominatorAnswer = denominatorOne * denominatorTwo; //multiplies the denominators
 
+        String numeratorAnswerString = Integer.toString(numeratorAnswer); //changes the numerator to a string
+        String denominatorAnswerString = Integer.toString(denominatorAnswer); //changes the denominator to a string
+        String fracAnswer = numeratorAnswerString + denominatorAnswerString; //combines the numerator and denominator into one string
+        //NEED TO DO: add in a / between the numerator and denominator
+
+        return fracAnswer;
+    }
     public String divide(Fraction theFraction)
     {
         int numeratorOne = this.numerator;
@@ -113,12 +131,17 @@ public class Fraction {
         int numeratorTwo = theFraction.getNum();
         int denominatorTwo = theFraction.getDenom();
 
-        //multiply numeratorOne and denominatorTwo store in numeratorAnswer
-        //multiply denominatorOne and numeratorTwo store in denominatorAnswer
-        //return numeratorAnswer + “/” + denominatorAnswer
-        return "nothing yet";
-    }
+        int numeratorAnswer = numeratorOne * denominatorTwo; //multiply numeratorOne and denominatorTwo
+        int denominatorAnswer = denominatorOne * numeratorTwo; //multiply denominatorOne and numeratorTwo
 
+        String numeratorAnswerString = Integer.toString(numeratorAnswer); //changes the numerator to a string
+        String denominatorAnswerString = Integer.toString(denominatorAnswer); //changes the denominator to a string
+        String fracAnswer = numeratorAnswerString + denominatorAnswerString; //combines the numerator and denominator into one string
+        //NEED TO DO: add in a / between the numerator and denominator
+
+        return fracAnswer;
+    }
+/*
     public String reduce()
     {
         return "nothing yet";
